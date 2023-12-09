@@ -6,5 +6,6 @@ userRouter.use(express.json());
 
 userRouter.post("/", Usercontroller.loginUser);
 userRouter.post("/user", Usercontroller.signUpUser);
+userRouter.post("/login", Usercontroller.UserLogin);
 
 module.exports = { userRouter };
