@@ -1,4 +1,4 @@
-//require("dotenv").config();
+require("dotenv").config();
 const express = require("express");
 const app = express();
 app.use(express.json());
@@ -10,9 +10,10 @@ app.use(cors());
 
 app.use("/login", userRouter);
 app.use("/signup", userRouter);
+app.use("/getUser", userRouter);
 
 const PORT = process.env.PORT || 3002;
-// console.log(PORT)
+
 app.listen(PORT, async () => {
   try {
     await connect();

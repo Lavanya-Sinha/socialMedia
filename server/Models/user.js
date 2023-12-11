@@ -4,14 +4,8 @@ const userSchema = new mongoose.Schema({
   password: { type: String, require: true },
   name: { type: String, require: true },
   age: { type: Number, require: true },
-  username :{type: String, require: true}
-});
-const loginUser = new mongoose.Schema({
-  username: {type: String, require: true},
-  password: {type: String, require: true}
+  username: { type: String, require: true },
 });
 
 const usermodal = mongoose.model("user", userSchema);
-const loginModel = mongoose.model("login", loginUser)
 module.exports = usermodal;
-module.exports = loginModel;
